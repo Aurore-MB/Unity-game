@@ -6,13 +6,15 @@ public class MovementController : MonoBehaviour
 {
     public Vector3 targetPosition;  // Position cible vers laquelle le joueur se déplacera
     public float speed = 1.0f;      // Vitesse de déplacement du joueur
+    public float stoppingDistance = 0.1f; // Distance minimale avant de s'arrêter
 
     // Coroutine pour déplacer le joueur
     public IEnumerator MoveToTarget()
     {
         Debug.Log("Moving to target: " + targetPosition);
-        // Tant que le joueur n'a pas atteint la position cible
-        while (Vector3.Distance(transform.position, targetPosition) > 0.1f)
+
+        // Tant que le joueur n'a pas atteint la position cible ou qu'il est très proche
+        while (Vector3.Distance(transform.position, targetPosition) > stoppingDistance)
         {
             // Déplace le joueur vers la position cible à chaque frame
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
