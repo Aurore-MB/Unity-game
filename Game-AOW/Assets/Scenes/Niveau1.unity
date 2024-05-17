@@ -451,7 +451,6 @@ GameObject:
   - component: {fileID: 967958931}
   - component: {fileID: 967958930}
   - component: {fileID: 967958929}
-  - component: {fileID: 967958928}
   m_Layer: 0
   m_Name: Background 2
   m_TagString: Untagged
@@ -459,20 +458,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &967958928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967958927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08518d05284e95f41b2b37d9afa1b83d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scrollSpeed: 0.2
-  scroll: 1
 --- !u!64 &967958929
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -572,7 +557,6 @@ GameObject:
   - component: {fileID: 1023631625}
   - component: {fileID: 1023631624}
   - component: {fileID: 1023631623}
-  - component: {fileID: 1023631622}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -580,20 +564,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1023631622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023631621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08518d05284e95f41b2b37d9afa1b83d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scrollSpeed: 0.2
-  scroll: 1
 --- !u!64 &1023631623
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -692,7 +662,6 @@ GameObject:
   - component: {fileID: 1358957644}
   - component: {fileID: 1358957643}
   - component: {fileID: 1358957642}
-  - component: {fileID: 1358957641}
   - component: {fileID: 1358957640}
   m_Layer: 0
   m_Name: Ground1
@@ -746,20 +715,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1358957641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1358957639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08518d05284e95f41b2b37d9afa1b83d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scrollSpeed: 5
-  scroll: 1
 --- !u!23 &1358957642
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -836,7 +791,6 @@ GameObject:
   - component: {fileID: 1532858456}
   - component: {fileID: 1532858455}
   - component: {fileID: 1532858454}
-  - component: {fileID: 1532858453}
   - component: {fileID: 1532858452}
   m_Layer: 0
   m_Name: Ground1 (1)
@@ -890,20 +844,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1532858453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1532858451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08518d05284e95f41b2b37d9afa1b83d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scrollSpeed: 5
-  scroll: 1
 --- !u!23 &1532858454
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -980,6 +920,7 @@ GameObject:
   - component: {fileID: 1945202643}
   - component: {fileID: 1945202642}
   - component: {fileID: 1945202641}
+  - component: {fileID: 1945202644}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1061,6 +1002,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1945202644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945202640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f0b82c18fb0d44f8b65f59a2a8c1ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  enableAutomaticMovement: 0
+  minPositionX: 0
+  maxPositionX: 20
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
