@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
         // Activer la barre de vie du joueur en la liant à sa position
         HealthBarFollow playerHealthBarFollow = playerCanvas.GetComponentInChildren<HealthBarFollow>();
         playerHealthBarFollow.target = player.transform;
+        player.GetComponent<Health>().healthBarObject = playerHealthBarFollow.gameObject; // Assurez-vous que healthBarObject est assigné
+
         Debug.Log("Player HealthBar target set to " + playerHealthBarFollow.target.name);
 
         // Démarrer la coroutine de déplacement sur le script MovementController du joueur
@@ -55,6 +57,8 @@ public class GameManager : MonoBehaviour
         // Activer la barre de vie de l'ennemi en la liant à sa position
         HealthBarFollow enemyHealthBarFollow = enemyCanvas.GetComponentInChildren<HealthBarFollow>();
         enemyHealthBarFollow.target = enemy.transform;
+        enemy.GetComponent<Health>().healthBarObject = enemyHealthBarFollow.gameObject; // Assurez-vous que healthBarObject est assigné
+
         Debug.Log("Enemy HealthBar target set to " + enemyHealthBarFollow.target.name);
 
         // Démarrer la coroutine de déplacement sur le script EnemyMovementController du joueur adverse
