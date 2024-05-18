@@ -8,11 +8,14 @@ public class MovementController : MonoBehaviour
     public float speed = 1.0f;      // Vitesse de déplacement du joueur
     public float stoppingDistance = 0.1f; // Distance minimale avant de s'arrêter
     private Animator animator;      // Référence à l'Animator
+    private Health health;          // Référence au composant Health
+    private Coroutine attackCoroutine; // Référence à la coroutine d'attaque
 
     void Start()
     {
         // Obtenir la référence à l'Animator
         animator = GetComponent<Animator>();
+        health = GetComponent<Health>();
 
         // Définir la gravité à 0 si nécessaire
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
@@ -51,6 +54,11 @@ public class MovementController : MonoBehaviour
             animator.SetBool("isAttacking", true);
             // Arrêter le mouvement
             StopCoroutine(MoveToTarget());
+            // Commencer l'attaque continue
+            if (attackCoroutine == null)
+            {
+                attackCoroutine = StartCoroutine(AttackContinuously(other.GetComponent<Health>()));
+            }
         }
     }
 
@@ -64,6 +72,22 @@ public class MovementController : MonoBehaviour
             animator.SetBool("isAttacking", false);
             // Reprendre le mouvement
             StartCoroutine(MoveToTarget());
+            // Arrêter l'attaque continue
+            if (attackCoroutine != null)
+            {
+                StopCoroutine(attackCoroutine);
+                attackCoroutine = null;
+            }
+        }
+    }
+
+    // Coroutine pour attaquer continuellement
+    private IEnumerator AttackContinuously(Health targetHealth)
+    {
+        while (true)
+        {
+            targetHealth.TakeDamage(10);
+            yield return new WaitForSeconds(1.0f); // Attaque toutes les secondes, ajustez si nécessaire
         }
     }
 }

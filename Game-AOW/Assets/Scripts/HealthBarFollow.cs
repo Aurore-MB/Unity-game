@@ -14,8 +14,12 @@ public class HealthBarFollow : MonoBehaviour
     {
         if (target != null)
         {
-            transform.position = Camera.main.WorldToScreenPoint(target.position + offset);
-            Debug.Log(gameObject.name + " following target " + target.name);
+            transform.position = target.position + offset;
+            Debug.Log(gameObject.name + " following target " + target.name + " at position " + target.position);
+        }
+        else
+        {
+            Debug.Log(gameObject.name + " has no target assigned.");
         }
     }
 }

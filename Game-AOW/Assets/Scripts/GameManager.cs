@@ -6,8 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public GameObject player;          // Le joueur
     public GameObject enemy;           // Le joueur adverse
-    public GameObject playerHealthBar; // Barre de vie du joueur
-    public GameObject enemyHealthBar;  // Barre de vie de l'ennemi
+    public Canvas playerCanvas;        // Canvas du joueur
+    public Canvas enemyCanvas;         // Canvas de l'ennemi
     public float delayBeforeStart = 3.0f; // Délai avant l'apparition du joueur et le début du déplacement
 
     void Start()
@@ -21,25 +21,25 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Coroutine WaitAndMovePlayers started");
         
-        // Désactive les joueurs et les barres de vie au début
+        // Désactive les joueurs et les Canvas au début
         player.SetActive(false);
         enemy.SetActive(false);
-        playerHealthBar.SetActive(false);
-        enemyHealthBar.SetActive(false);
+        playerCanvas.gameObject.SetActive(false);
+        enemyCanvas.gameObject.SetActive(false);
         
-        Debug.Log("Players and health bars deactivated");
+        Debug.Log("Players and Canvases deactivated");
 
         // Attendre le délai spécifié
         Debug.Log("Waiting for " + delayBeforeStart + " seconds");
         yield return new WaitForSeconds(delayBeforeStart);
 
-        // Activer le joueur et sa barre de vie
-        Debug.Log("Activating player and player health bar");
+        // Activer le joueur et son Canvas
+        Debug.Log("Activating player and player Canvas");
         player.SetActive(true);
-        playerHealthBar.SetActive(true);
+        playerCanvas.gameObject.SetActive(true);
 
         // Activer la barre de vie du joueur en la liant à sa position
-        HealthBarFollow playerHealthBarFollow = playerHealthBar.GetComponent<HealthBarFollow>();
+        HealthBarFollow playerHealthBarFollow = playerCanvas.GetComponentInChildren<HealthBarFollow>();
         playerHealthBarFollow.target = player.transform;
         Debug.Log("Player HealthBar target set to " + playerHealthBarFollow.target.name);
 
@@ -47,13 +47,13 @@ public class GameManager : MonoBehaviour
         MovementController movementController = player.GetComponent<MovementController>();
         StartCoroutine(movementController.MoveToTarget());
 
-        // Activer le joueur adverse et sa barre de vie
-        Debug.Log("Activating enemy and enemy health bar");
+        // Activer le joueur adverse et son Canvas
+        Debug.Log("Activating enemy and enemy Canvas");
         enemy.SetActive(true);
-        enemyHealthBar.SetActive(true);
+        enemyCanvas.gameObject.SetActive(true);
 
         // Activer la barre de vie de l'ennemi en la liant à sa position
-        HealthBarFollow enemyHealthBarFollow = enemyHealthBar.GetComponent<HealthBarFollow>();
+        HealthBarFollow enemyHealthBarFollow = enemyCanvas.GetComponentInChildren<HealthBarFollow>();
         enemyHealthBarFollow.target = enemy.transform;
         Debug.Log("Enemy HealthBar target set to " + enemyHealthBarFollow.target.name);
 
