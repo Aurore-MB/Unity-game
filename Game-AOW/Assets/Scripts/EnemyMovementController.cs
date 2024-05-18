@@ -7,9 +7,13 @@ public class EnemyMovementController : MonoBehaviour
     public Vector3 targetPosition;  // Position cible vers laquelle l'ennemi se déplacera
     public float speed = 1.0f;      // Vitesse de déplacement de l'ennemi
     public float stoppingDistance = 0.1f; // Distance minimale avant de s'arrêter
+    private Animator animator;      // Référence à l'Animator
 
     void Start()
     {
+        // Obtenir la référence à l'Animator
+        animator = GetComponent<Animator>();
+
         // Définissez ici la position cible de l'ennemi
         targetPosition = new Vector3(-10, 0, 0); // Exemple : déplacer l'ennemi vers la gauche
     }
@@ -31,5 +35,31 @@ public class EnemyMovementController : MonoBehaviour
         // Assure que l'ennemi atteint précisément la position cible
         Debug.Log("Enemy reached target position: " + targetPosition);
         transform.position = targetPosition;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        // Si l'ennemi entre en collision avec un joueur ou un obstacle
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Obstacle"))
+        {
+            Debug.Log("Enemy collision detected with: " + other.gameObject.name);
+            // Déclencher l'animation d'attaque
+            animator.SetBool("isAttacking", true);
+            // Arrêter le mouvement
+            StopCoroutine(MoveToTarget());
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        // Si l'ennemi sort de la collision avec un joueur ou un obstacle
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Obstacle"))
+        {
+            Debug.Log("Enemy collision ended with: " + other.gameObject.name);
+            // Revenir à l'animation de marche
+            animator.SetBool("isAttacking", false);
+            // Reprendre le mouvement
+            StartCoroutine(MoveToTarget());
+        }
     }
 }
