@@ -456,7 +456,7 @@ Transform:
   m_GameObject: {fileID: 255499553}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.07, y: -1.15, z: 0}
+  m_LocalPosition: {x: 22.19, y: -1.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67af86eac68b8e4bb633d0d646004bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 25
+  maxHealth: 35
   healthBar: {fileID: 1996775102}
   healthBarObject: {fileID: 0}
 --- !u!114 &255499562
@@ -535,7 +535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: -40, y: 0, z: 0}
-  speed: 0.8
+  speed: 0.5
   stoppingDistance: 0.1
 --- !u!1 &257889500
 GameObject:
@@ -2231,7 +2231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: 40, y: 0, z: 0}
-  speed: 0.8
+  speed: 0.5
   stoppingDistance: 0.1
 --- !u!1 &1945202640
 GameObject:

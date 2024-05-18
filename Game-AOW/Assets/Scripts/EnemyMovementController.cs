@@ -91,10 +91,10 @@ public class EnemyMovementController : MonoBehaviour
     // Coroutine pour attaquer continuellement
     private IEnumerator AttackContinuously(Health targetHealth)
     {
-        while (!targetHealth.IsDead())
+        while (!targetHealth.IsDead() && !health.IsDead())
         {
             targetHealth.TakeDamage(10);
-            yield return new WaitForSeconds(1.0f); // Attaque toutes les secondes, ajustez si nécessaire
+            yield return new WaitForSeconds(4.0f); // Attaque toutes les 2 secondes, ajustez si nécessaire
         }
     }
 
