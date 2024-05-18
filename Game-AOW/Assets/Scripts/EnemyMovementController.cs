@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMovementController : MonoBehaviour
@@ -10,6 +9,7 @@ public class EnemyMovementController : MonoBehaviour
     private Animator animator;      // Référence à l'Animator
     private Health health;          // Référence au composant Health
     private Coroutine attackCoroutine; // Référence à la coroutine d'attaque
+    private Rigidbody2D rb;
 
     void Start()
     {
@@ -17,8 +17,19 @@ public class EnemyMovementController : MonoBehaviour
         animator = GetComponent<Animator>();
         health = GetComponent<Health>();
 
-        // Définissez ici la position cible de l'ennemi
-        targetPosition = new Vector3(-10, 0, 0); // Exemple : déplacer l'ennemi vers la gauche
+        // Configurer le Rigidbody2D
+        rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.gravityScale = 1; // Assurez-vous que la gravité est activée
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation; // Empêche le personnage de tourner
+        }
+
+        // Positionner initialement le personnage sur le sol
+        PositionOnGround();
+
+        // Démarrer la coroutine de déplacement
+        StartCoroutine(MoveToTarget());
     }
 
     // Coroutine pour déplacer l'ennemi
@@ -50,7 +61,7 @@ public class EnemyMovementController : MonoBehaviour
             animator.SetBool("isAttacking", true);
             // Arrêter le mouvement
             StopCoroutine(MoveToTarget());
-            // Commencer l'attaque continue
+            // Commencer l'attaque continue immédiatement
             if (attackCoroutine == null)
             {
                 attackCoroutine = StartCoroutine(AttackContinuously(other.GetComponent<Health>()));
@@ -80,10 +91,20 @@ public class EnemyMovementController : MonoBehaviour
     // Coroutine pour attaquer continuellement
     private IEnumerator AttackContinuously(Health targetHealth)
     {
-        while (true)
+        while (!targetHealth.IsDead())
         {
             targetHealth.TakeDamage(10);
             yield return new WaitForSeconds(1.0f); // Attaque toutes les secondes, ajustez si nécessaire
+        }
+    }
+
+    // Positionner initialement le personnage sur le sol
+    private void PositionOnGround()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, Mathf.Infinity, LayerMask.GetMask("Ground"));
+        if (hit.collider != null)
+        {
+            transform.position = new Vector3(transform.position.x, hit.point.y + GetComponent<Collider2D>().bounds.extents.y, transform.position.z);
         }
     }
 }
