@@ -881,6 +881,7 @@ MonoBehaviour:
   healthBar: {fileID: 1996775102}
   healthBarObject: {fileID: 0}
   xpReward: 50
+  goldReward: 50
 --- !u!114 &255499562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1505,6 +1506,7 @@ GameObject:
   - component: {fileID: 552913315}
   - component: {fileID: 552913317}
   - component: {fileID: 552913318}
+  - component: {fileID: 552913319}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1571,6 +1573,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentXP: 1000
   xpText: {fileID: 1916337151}
+--- !u!114 &552913319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552913314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9976c911586d95142a5a8e0806961bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentGold: 2500
+  goldText: {fileID: 1326296849}
 --- !u!1 &577855618
 GameObject:
   m_ObjectHideFlags: 0
@@ -5425,6 +5441,7 @@ MonoBehaviour:
   healthBar: {fileID: 1311622918}
   healthBarObject: {fileID: 0}
   xpReward: 50
+  goldReward: 50
 --- !u!114 &1786098937
 MonoBehaviour:
   m_ObjectHideFlags: 0
