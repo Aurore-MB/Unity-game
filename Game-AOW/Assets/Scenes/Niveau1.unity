@@ -3303,6 +3303,7 @@ MonoBehaviour:
     damage: 5
     speed: 3
     unitPrefab: {fileID: 9140150052840103856, guid: a3774f2dc994d0348a102c201b0f6891, type: 3}
+  isUpgradeButton: 0
 --- !u!114 &738291158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4015,6 +4016,7 @@ MonoBehaviour:
     damage: 5
     speed: 3
     unitPrefab: {fileID: 9140150052840103856, guid: a3774f2dc994d0348a102c201b0f6891, type: 3}
+  isUpgradeButton: 1
 --- !u!114 &951952421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5570,9 +5572,10 @@ MonoBehaviour:
   unit:
     unitName: Shinobi jump
     health: 25
-    damage: 10
-    speed: 10
+    damage: 3
+    speed: 2
     unitPrefab: {fileID: 3201553023594629264, guid: 27af1875dc2098f4688de860a8ea8502, type: 3}
+  isUpgradeButton: 1
 --- !u!114 &1346380510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6627,6 +6630,7 @@ MonoBehaviour:
     damage: 5
     speed: 2
     unitPrefab: {fileID: 7702078839128705946, guid: de5758a5ab3d39642ae0aaca9755ffcb, type: 3}
+  isUpgradeButton: 0
 --- !u!1 &1592680223
 GameObject:
   m_ObjectHideFlags: 0
@@ -6681,9 +6685,10 @@ MonoBehaviour:
   unit:
     unitName: Shinobi jump
     health: 25
-    damage: 10
-    speed: 10
+    damage: 3
+    speed: 2
     unitPrefab: {fileID: 3201553023594629264, guid: 27af1875dc2098f4688de860a8ea8502, type: 3}
+  isUpgradeButton: 1
 --- !u!114 &1592680226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6941,9 +6946,10 @@ MonoBehaviour:
   unit:
     unitName: Shinobi
     health: 25
-    damage: 5
+    damage: 3
     speed: 2
     unitPrefab: {fileID: 7702078839128705946, guid: de5758a5ab3d39642ae0aaca9755ffcb, type: 3}
+  isUpgradeButton: 1
 --- !u!114 &1656594393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7598,6 +7604,7 @@ MonoBehaviour:
     damage: 3
     speed: 4
     unitPrefab: {fileID: 96475311259031731, guid: 75007059ebca4954987981ff15fa9c8b, type: 3}
+  isUpgradeButton: 0
 --- !u!114 &1757849986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8720,11 +8727,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit:
-    unitName: Shinobi jump
+    unitName: Shinobi1
     health: 25
     damage: 10
     speed: 10
     unitPrefab: {fileID: 3201553023594629264, guid: 27af1875dc2098f4688de860a8ea8502, type: 3}
+  isUpgradeButton: 0
 --- !u!114 &2049776902
 MonoBehaviour:
   m_ObjectHideFlags: 0

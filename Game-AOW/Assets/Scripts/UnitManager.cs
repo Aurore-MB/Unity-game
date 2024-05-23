@@ -56,5 +56,12 @@ public class UnitManager : MonoBehaviour
         HealthBarFollow healthBarFollow = healthBar.GetComponent<HealthBarFollow>();
         healthBarFollow.target = newUnit.transform;
         newUnit.GetComponent<Health>().healthBarObject = healthBar; // Assurez-vous que healthBarObject est assigné
+
+        // Assurez-vous que les nouvelles unités utilisent les statistiques mises à jour
+        UnitInstance unitInstance = newUnit.GetComponent<UnitInstance>();
+        if (unitInstance != null)
+        {
+            unitInstance.UpdateStats(unit);
+        }
     }
 }

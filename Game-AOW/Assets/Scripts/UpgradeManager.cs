@@ -58,18 +58,21 @@ public class UpgradeManager : MonoBehaviour
     {
         selectedUnit.health += 10; // Augmente la santé de l'unité de 10 (ajustez la valeur selon vos besoins)
         UpdateUnitInfo();
+        UpdateExistingUnits();
     }
 
     void UpgradeDamage()
     {
         selectedUnit.damage += 5; // Augmente les dégâts de l'unité de 5 (ajustez la valeur selon vos besoins)
         UpdateUnitInfo();
+        UpdateExistingUnits();
     }
 
     void UpgradeSpeed()
     {
         selectedUnit.speed += 1; // Augmente la vitesse de l'unité de 1 (ajustez la valeur selon vos besoins)
         UpdateUnitInfo();
+        UpdateExistingUnits();
     }
 
     void UnlockUnit()
@@ -77,5 +80,18 @@ public class UpgradeManager : MonoBehaviour
         // Logique pour déverrouiller l'unité, par exemple rendre l'unité disponible dans le jeu
         Debug.Log("Unit unlocked: " + selectedUnit.unitName);
         unlockButton.interactable = false; // Désactive le bouton de déverrouillage après utilisation
+    }
+
+    void UpdateExistingUnits()
+    {
+        // Parcourir toutes les instances de l'unité présente et mettre à jour leurs statistiques
+        UnitInstance[] existingUnits = FindObjectsOfType<UnitInstance>();
+        foreach (var unit in existingUnits)
+        {
+            if (unit.unitType.unitName == selectedUnit.unitName)
+            {
+                unit.UpdateStats(selectedUnit);
+            }
+        }
     }
 }

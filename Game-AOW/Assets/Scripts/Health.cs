@@ -22,16 +22,31 @@ public class Health : MonoBehaviour
         goldManager = FindObjectOfType<GoldManager>(); // Trouver le GoldManager dans la scène
     }
 
+    public void SetHealth(int health)
+    {
+        maxHealth = health;
+        currentHealth = health;
+        UpdateHealthBar();
+    }
+
     public void TakeDamage(int damage)
     {
         if (isDead) return; // Ne pas prendre de dégâts si déjà mort
 
         currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
+        UpdateHealthBar();
 
         if (currentHealth <= 0)
         {
             Die();
+        }
+    }
+
+    void UpdateHealthBar()
+    {
+        if (healthBar != null)
+        {
+            healthBar.SetHealth(currentHealth);
         }
     }
 
