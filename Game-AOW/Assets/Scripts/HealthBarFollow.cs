@@ -4,22 +4,21 @@ public class HealthBarFollow : MonoBehaviour
 {
     public Transform target;    // Le personnage que la barre de vie doit suivre
     public Vector3 offset = new Vector3(0, 1.5f, 0);  // Décalage de la barre de vie par rapport au personnage
+    private RectTransform rectTransform;
+    private Canvas canvas;
 
     void Start()
     {
-        Debug.Log(gameObject.name + " HealthBarFollow started");
+        rectTransform = GetComponent<RectTransform>();
+        canvas = GetComponentInParent<Canvas>();
     }
 
     void Update()
     {
         if (target != null)
         {
-            transform.position = target.position + offset;
-            Debug.Log(gameObject.name + " following target " + target.name + " at position " + target.position);
-        }
-        else
-        {
-            Debug.Log(gameObject.name + " has no target assigned.");
+            Vector3 screenPoint = Camera.main.WorldToScreenPoint(target.position + offset);
+            rectTransform.position = screenPoint;
         }
     }
 }

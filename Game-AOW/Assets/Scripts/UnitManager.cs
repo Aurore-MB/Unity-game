@@ -7,6 +7,8 @@ public class UnitManager : MonoBehaviour
     public List<UnitCharacteristics> unitTypes; // Liste des différents types d'unités
     public Transform spawnPoint; // Point de spawn des unités
     public Transform targetPoint; // Point cible vers lequel les unités se déplaceront
+    public GameObject healthBarPrefab; // Préfabriqué pour la barre de vie
+    public Canvas healthBarCanvas; // Canvas pour les barres de vie
 
     private Queue<UnitCharacteristics> unitQueue = new Queue<UnitCharacteristics>();
 
@@ -48,5 +50,11 @@ public class UnitManager : MonoBehaviour
             movementController.targetPosition = targetPoint.position;
             Debug.Log("Target position set for unit: " + targetPoint.position);
         }
+
+        // Créer et configurer la barre de vie
+        GameObject healthBar = Instantiate(healthBarPrefab, healthBarCanvas.transform);
+        HealthBarFollow healthBarFollow = healthBar.GetComponent<HealthBarFollow>();
+        healthBarFollow.target = newUnit.transform;
+        newUnit.GetComponent<Health>().healthBarObject = healthBar; // Assurez-vous que healthBarObject est assigné
     }
 }
