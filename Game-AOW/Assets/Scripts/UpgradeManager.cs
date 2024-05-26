@@ -19,7 +19,7 @@ public class UpgradeManager : MonoBehaviour
     {
         // Désactiver les boutons d'amélioration et le texte des statistiques au début
         SetUpgradeOptionsActive(false);
-        
+
         // Ajouter des listeners aux boutons
         healthUpgradeButton.onClick.AddListener(UpgradeHealth);
         damageUpgradeButton.onClick.AddListener(UpgradeDamage);
