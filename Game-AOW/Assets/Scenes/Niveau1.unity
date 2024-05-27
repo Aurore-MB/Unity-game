@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 14874608}
   m_Layer: 0
   m_Name: grotte 2
-  m_TagString: Obstacle
+  m_TagString: EnemyHouse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304,7 +304,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   healthSlider: {fileID: 577855620}
-  damagePerSecond: 5
+  damagePerSecond: 10
+  enemyTag: Player
 --- !u!1 &22867237
 GameObject:
   m_ObjectHideFlags: 0
@@ -2537,7 +2538,7 @@ GameObject:
   - component: {fileID: 685037938}
   m_Layer: 0
   m_Name: grotte
-  m_TagString: Obstacle
+  m_TagString: PlayerHouse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2703,7 +2704,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   healthSlider: {fileID: 670720482}
-  damagePerSecond: 3
+  damagePerSecond: 10
+  enemyTag: Enemy
 --- !u!1 &708752014
 GameObject:
   m_ObjectHideFlags: 0

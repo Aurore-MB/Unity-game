@@ -53,8 +53,8 @@ public class MovementController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Si le joueur entre en collision avec un ennemi ou un obstacle
-        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Obstacle"))
+        // Si le joueur entre en collision avec un ennemi ou une maison
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyHouse"))
         {
             Debug.Log("Collision detected with: " + other.gameObject.name);
             // Déclencher l'animation d'attaque
@@ -71,8 +71,8 @@ public class MovementController : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        // Si le joueur sort de la collision avec un ennemi ou un obstacle
-        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Obstacle"))
+        // Si le joueur sort de la collision avec un ennemi ou une maison
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("EnemyHouse"))
         {
             Debug.Log("Collision ended with: " + other.gameObject.name);
             // Revenir à l'animation de marche

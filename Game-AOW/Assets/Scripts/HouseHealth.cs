@@ -8,6 +8,7 @@ public class HouseHealth : MonoBehaviour
     private float currentHealth;   // Points de vie actuels
     public Slider healthSlider;    // Référence au slider de la barre de vie
     public float damagePerSecond = 10f; // Dégâts par seconde
+    public string enemyTag;        // Tag de l'unité qui peut attaquer cette maison
 
     void Start()
     {
@@ -47,8 +48,8 @@ public class HouseHealth : MonoBehaviour
     // Gestion des collisions continues
     void OnTriggerStay2D(Collider2D other)
     {
-        // Vérifier si l'objet entrant est une unité de joueur ou d'ennemi
-        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Enemy"))
+        // Vérifier si l'objet entrant est une unité de l'équipe opposée
+        if (other.gameObject.CompareTag(enemyTag))
         {
             Debug.Log("Collision detected with " + other.gameObject.tag);
             // Appliquer des dégâts en continu tant que l'unité reste en collision
