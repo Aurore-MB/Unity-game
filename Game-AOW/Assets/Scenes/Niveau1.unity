@@ -1870,8 +1870,7 @@ MonoBehaviour:
   - {fileID: 4122854892825821772, guid: ca2669e08b360e14485f4e6ca95b2d45, type: 3}
   - {fileID: 4693450980894739241, guid: 81a1ba9c80c47b644bee27cdf4e14a28, type: 3}
   - {fileID: 4386275880269868691, guid: 0306558625f688943a573fb2cb6e94ac, type: 3}
-  enemyCanvas: {fileID: 46818697}
-  healthBarPrefab: {fileID: 1554902441}
+  healthBarManager: {fileID: 1554902446}
   initialDelay: 3
   spawnInterval: 5
   enemySpawnPoint: {fileID: 1488689606}
@@ -5394,6 +5393,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8064116366354844456, guid: 2715dca14fbe8304cbe78adc3c84dbf4, type: 3}
   m_PrefabInstance: {fileID: 4683714057655964100}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1554902446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554902441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ad60078666d2e742af2dff9ab02ff3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarPrefab: {fileID: 1554902441}
+  mainCanvas: {fileID: 46818697}
 --- !u!1 &1565242898
 GameObject:
   m_ObjectHideFlags: 0
@@ -8260,6 +8273,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1990592041}
     m_Modifications:
+    - target: {fileID: 712141705093155986, guid: 2715dca14fbe8304cbe78adc3c84dbf4, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 3647690187890341921, guid: 27af1875dc2098f4688de860a8ea8502, type: 3}
     - target: {fileID: 1175020627732908626, guid: 2715dca14fbe8304cbe78adc3c84dbf4, type: 3}
       propertyPath: m_Camera
       value: 
@@ -8356,10 +8373,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_prefabs
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9074706451774553118, guid: 2715dca14fbe8304cbe78adc3c84dbf4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 712141705093155986, guid: 2715dca14fbe8304cbe78adc3c84dbf4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8064116366354844456, guid: 2715dca14fbe8304cbe78adc3c84dbf4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1554902446}
   m_SourcePrefab: {fileID: 100100000, guid: 2715dca14fbe8304cbe78adc3c84dbf4, type: 3}
 --- !u!1 &5289763508674824297
 GameObject:

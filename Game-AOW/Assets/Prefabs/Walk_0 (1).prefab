@@ -232,7 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 35
   healthBar: {fileID: 0}
-  healthBarObject: {fileID: 1737003731131201647, guid: be94fdf92a7f81f439a3c5564bd01e73, type: 3}
+  healthBarObject: {fileID: 9074706451774553118, guid: 2715dca14fbe8304cbe78adc3c84dbf4, type: 3}
   xpReward: 50
   goldReward: 50
 --- !u!114 &499670942659829394
