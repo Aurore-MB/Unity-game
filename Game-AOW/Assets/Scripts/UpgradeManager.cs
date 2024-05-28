@@ -36,10 +36,13 @@ public class UpgradeManager : MonoBehaviour
 
     void UpdateUnitInfo()
     {
-        unitNameText.text = "Nom de l'Unité: " + selectedUnit.unitName;
-        healthText.text = "Health: " + selectedUnit.health;
-        damageText.text = "Damage: " + selectedUnit.damage;
-        speedText.text = "Speed: " + selectedUnit.speed;
+        if (selectedUnit != null)
+        {
+            unitNameText.text = "Nom de l'Unité: " + selectedUnit.unitName;
+            healthText.text = "Health: " + selectedUnit.health;
+            damageText.text = "Damage: " + selectedUnit.damage;
+            speedText.text = "Speed: " + selectedUnit.speed;
+        }
     }
 
     void SetUpgradeOptionsActive(bool isActive)
@@ -54,28 +57,37 @@ public class UpgradeManager : MonoBehaviour
         speedText.gameObject.SetActive(isActive);
     }
 
-    void UpgradeHealth()
+    public void UpgradeHealth()
     {
-        selectedUnit.health += 10; // Augmente la santé de l'unité de 10 (ajustez la valeur selon vos besoins)
-        UpdateUnitInfo();
-        UpdateExistingUnits();
+        if (selectedUnit != null)
+        {
+            selectedUnit.health += 10; // Augmente la santé de l'unité de 10 (ajustez la valeur selon vos besoins)
+            UpdateUnitInfo();
+            UpdateExistingUnits();
+        }
     }
 
-    void UpgradeDamage()
+    public void UpgradeDamage()
     {
-        selectedUnit.damage += 5; // Augmente les dégâts de l'unité de 5 (ajustez la valeur selon vos besoins)
-        UpdateUnitInfo();
-        UpdateExistingUnits();
+        if (selectedUnit != null)
+        {
+            selectedUnit.damage += 5; // Augmente les dégâts de l'unité de 5 (ajustez la valeur selon vos besoins)
+            UpdateUnitInfo();
+            UpdateExistingUnits();
+        }
     }
 
-    void UpgradeSpeed()
+    public void UpgradeSpeed()
     {
-        selectedUnit.speed += 1; // Augmente la vitesse de l'unité de 1 (ajustez la valeur selon vos besoins)
-        UpdateUnitInfo();
-        UpdateExistingUnits();
+        if (selectedUnit != null)
+        {
+            selectedUnit.speed += 1; // Augmente la vitesse de l'unité de 1 (ajustez la valeur selon vos besoins)
+            UpdateUnitInfo();
+            UpdateExistingUnits();
+        }
     }
 
-    void UnlockUnit()
+    public void UnlockUnit()
     {
         // Logique pour déverrouiller l'unité, par exemple rendre l'unité disponible dans le jeu
         Debug.Log("Unit unlocked: " + selectedUnit.unitName);
