@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject[] enemyPrefabs; // Tableaux des prefabs des ennemis
-    public HealthBarManager healthBarManager; // Référence au HealthBarManager
-    public float initialDelay = 3.0f; // Délai avant l'apparition du premier ennemi
-    public float spawnInterval = 10.0f; // Intervalle entre les apparitions des ennemis
-    public Transform enemySpawnPoint; // Point de spawn des ennemis
-    public Transform enemyTargetPoint; // Point cible des ennemis
+    public GameObject[] enemyPrefabs; // Array of enemy prefabs
+    public float initialDelay = 3.0f; // Delay before the first enemy appears
+    public float spawnInterval = 10.0f; // Interval between enemy spawns
+    public Transform enemySpawnPoint; // Spawn point for enemies
+    public Transform enemyTargetPoint; // Target point for enemies
+    public GameObject healthBarPrefab; // Reference to the health bar prefab
 
     void Start()
     {
@@ -21,20 +21,14 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Coroutine WaitAndMovePlayers started");
 
-        // Attendre le délai spécifié
+        // Wait for the specified delay
         Debug.Log("Waiting for " + initialDelay + " seconds");
         yield return new WaitForSeconds(initialDelay);
-
-        // Activer le Canvas des ennemis (s'il est désactivé)
-        if (!healthBarManager.mainCanvas.gameObject.activeSelf)
-        {
-            healthBarManager.mainCanvas.gameObject.SetActive(true);
-        }
     }
 
     IEnumerator SpawnEnemies()
     {
-        // Attendre avant de générer le premier ennemi
+        // Wait before spawning the first enemy
         yield return new WaitForSeconds(initialDelay);
 
         while (true)
@@ -51,7 +45,11 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Target position set for new enemy");
             }
 
-            healthBarManager.AddHealthBar(newEnemy.transform);
+            Health health = newEnemy.GetComponent<Health>();
+            if (health != null)
+            {
+                health.healthBarPrefab = healthBarPrefab;
+            }
 
             Debug.Log("HealthBar created and configured for new enemy");
 

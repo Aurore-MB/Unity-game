@@ -5,21 +5,29 @@ public class Health : MonoBehaviour
 {
     public int maxHealth = 100;
     private int currentHealth;
-    public HealthBar healthBar;
-    public GameObject healthBarObject; // Référence à l'objet de la barre de vie
-    public int xpReward = 50; // XP récompense pour la destruction de cet ennemi
-    public int goldReward = 50; // Or récompense pour la destruction de cet ennemi
-    private XPManager xpManager; // Référence au XPManager
-    private GoldManager goldManager; // Référence au GoldManager
+    public GameObject healthBarPrefab; // Prefab for the health bar
+    private GameObject healthBar; // Instance of the health bar
+    private SpriteRenderer healthBarSprite; // SpriteRenderer of the health bar
+    public int xpReward = 50; // XP reward for destroying this enemy
+    public int goldReward = 50; // Gold reward for destroying this enemy
+    private XPManager xpManager; // Reference to the XPManager
+    private GoldManager goldManager; // Reference to the GoldManager
     private bool isDead = false;
 
     void Start()
     {
         Debug.Log(gameObject.name + " Health started");
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
-        xpManager = FindObjectOfType<XPManager>(); // Trouver le XPManager dans la scène
-        goldManager = FindObjectOfType<GoldManager>(); // Trouver le GoldManager dans la scène
+        xpManager = FindObjectOfType<XPManager>(); // Find the XPManager in the scene
+        goldManager = FindObjectOfType<GoldManager>(); // Find the GoldManager in the scene
+
+        // Instantiate the health bar
+        healthBar = Instantiate(healthBarPrefab, transform);
+        healthBar.transform.localPosition = new Vector3(0, 1.5f, 0); // Position it above the unit
+        healthBar.transform.localScale = new Vector3(-1.32f, 0.24f, 1f); // Adjust scale to the required size
+        healthBarSprite = healthBar.GetComponent<SpriteRenderer>();
+
+        UpdateHealthBar();
     }
 
     public void SetHealth(int health)
@@ -31,7 +39,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (isDead) return; // Ne pas prendre de dégâts si déjà mort
+        if (isDead) return; // Do not take damage if already dead
 
         currentHealth -= damage;
         UpdateHealthBar();
@@ -44,20 +52,22 @@ public class Health : MonoBehaviour
 
     void UpdateHealthBar()
     {
-        if (healthBar != null)
+        if (healthBarSprite != null)
         {
-            healthBar.SetHealth(currentHealth);
+            float healthPercent = (float)currentHealth / maxHealth;
+            healthBarSprite.transform.localScale = new Vector3(healthPercent * -1.32f, 0.24f, 1f); // Adjust the width based on health percentage
+            healthBarSprite.color = Color.Lerp(Color.red, Color.green, healthPercent); // Color changes from red to green
         }
     }
 
     void Die()
     {
-        if (isDead) return; // Ne pas mourir deux fois
+        if (isDead) return; // Do not die twice
 
         isDead = true;
         Debug.Log(gameObject.name + " is dead!");
 
-        // Attribuer de l'XP et de l'or si l'entité qui meurt est un ennemi
+        // Reward XP and gold if the entity dying is an enemy
         if (xpManager != null)
         {
             xpManager.GainXP(xpReward);
@@ -68,21 +78,21 @@ public class Health : MonoBehaviour
             goldManager.GainGold(goldReward);
         }
 
-        // Attribuer de l'XP supplémentaire si l'entité qui meurt est un joueur
+        // Award extra XP if the entity dying is a player
         if (gameObject.CompareTag("Player"))
         {
             Debug.Log("Player killed, awarding 100 XP");
             if (xpManager != null)
             {
-                xpManager.GainXP(100); // Attribuer 100 XP supplémentaires pour la mort du joueur
+                xpManager.GainXP(100); // Award 100 extra XP for the player's death
             }
         }
 
-        // Désactiver le joueur et sa barre de vie
+        // Disable the unit
         gameObject.SetActive(false);
-        if (healthBarObject != null)
+        if (healthBar != null)
         {
-            healthBarObject.SetActive(false);
+            healthBar.SetActive(false);
         }
     }
 

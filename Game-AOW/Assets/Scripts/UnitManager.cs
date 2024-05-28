@@ -4,46 +4,45 @@ using UnityEngine;
 
 public class UnitManager : MonoBehaviour
 {
-    public List<UnitCharacteristics> unitTypes; // Liste des différents types d'unités
-    public Transform spawnPoint; // Point de spawn des unités
-    public Transform targetPoint; // Point cible vers lequel les unités se déplaceront
-    public GameObject healthBarPrefab; // Préfabriqué pour la barre de vie
-    public Canvas healthBarCanvas; // Canvas pour les barres de vie
+    public List<UnitCharacteristics> unitTypes; // List of different unit types
+    public Transform spawnPoint; // Spawn point for units
+    public Transform targetPoint; // Target point for units
+    public GameObject healthBarPrefab; // Prefab for the health bar
 
     private Queue<UnitCharacteristics> unitQueue = new Queue<UnitCharacteristics>();
 
     void Start()
     {
-        // Initialisation, si nécessaire
+        // Initialization, if necessary
     }
 
     void Update()
     {
-        // Vérifier s'il y a des unités à créer
+        // Check if there are units to create
         if (unitQueue.Count > 0)
         {
             StartCoroutine(SpawnUnit(unitQueue.Dequeue()));
         }
     }
 
-    // Méthode pour ajouter une unité à la file d'attente
+    // Method to add a unit to the queue
     public void QueueUnit(UnitCharacteristics unit)
     {
         unitQueue.Enqueue(unit);
         Debug.Log("Unit added to queue: " + unit.unitName);
     }
 
-    // Coroutine pour créer une unité après un certain temps
+    // Coroutine to spawn a unit after a certain time
     private IEnumerator SpawnUnit(UnitCharacteristics unit)
     {
-        // Attendre avant de créer l'unité (si nécessaire)
+        // Wait before spawning the unit (if necessary)
         yield return new WaitForSeconds(1.0f);
 
-        // Créer l'unité à la position de spawn
+        // Spawn the unit at the spawn point
         GameObject newUnit = Instantiate(unit.unitPrefab, spawnPoint.position, Quaternion.identity);
         Debug.Log("Unit spawned: " + unit.unitName);
 
-        // Configurer la position cible de l'unité
+        // Set the target position of the unit
         MovementController movementController = newUnit.GetComponent<MovementController>();
         if (movementController != null)
         {
@@ -51,13 +50,18 @@ public class UnitManager : MonoBehaviour
             Debug.Log("Target position set for unit: " + targetPoint.position);
         }
 
-        // Créer et configurer la barre de vie
-        GameObject healthBar = Instantiate(healthBarPrefab, healthBarCanvas.transform);
-        HealthBarFollow healthBarFollow = healthBar.GetComponent<HealthBarFollow>();
-        healthBarFollow.target = newUnit.transform;
-        newUnit.GetComponent<Health>().healthBarObject = healthBar; // Assurez-vous que healthBarObject est assigné
+        // Add a health bar for the unit
+        GameObject healthBar = Instantiate(healthBarPrefab, newUnit.transform);
+        healthBar.transform.localPosition = new Vector3(0, 1.5f, 0); // Position it above the unit
+        healthBar.transform.localScale = new Vector3(-1.32f, 0.24f, 1f); // Adjust scale to the required size
 
-        // Assurez-vous que les nouvelles unités utilisent les statistiques mises à jour
+        Health health = newUnit.GetComponent<Health>();
+        if (health != null)
+        {
+            health.healthBarPrefab = healthBarPrefab;
+        }
+
+        // Ensure the new units use the updated stats
         UnitInstance unitInstance = newUnit.GetComponent<UnitInstance>();
         if (unitInstance != null)
         {
