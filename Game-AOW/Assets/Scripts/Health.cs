@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -13,6 +13,8 @@ public class Health : MonoBehaviour
     private XPManager xpManager; // Reference to the XPManager
     private GoldManager goldManager; // Reference to the GoldManager
     private bool isDead = false;
+
+    public event Action onDeath; // Event triggered when the unit dies
 
     void Start()
     {
@@ -87,6 +89,9 @@ public class Health : MonoBehaviour
                 xpManager.GainXP(100); // Award 100 extra XP for the player's death
             }
         }
+
+        // Trigger the death event
+        onDeath?.Invoke();
 
         // Disable the unit
         gameObject.SetActive(false);

@@ -8,18 +8,23 @@ public class UnitManager : MonoBehaviour
     public Transform spawnPoint; // Spawn point for units
     public Transform targetPoint; // Target point for units
     public GameObject healthBarPrefab; // Prefab for the health bar
+    public List<int> unitCosts = new List<int> { 50, 25, 30, 75 }; // List of possible unit costs
 
     private Queue<UnitCharacteristics> unitQueue = new Queue<UnitCharacteristics>();
+    private GoldManager goldManager; // Reference to the GoldManager
+
+    private List<GameObject> currentUnits = new List<GameObject>(); // List of current units
+    private const int maxUnits = 10; // Maximum number of units
 
     void Start()
     {
-        // Initialization, if necessary
+        goldManager = FindObjectOfType<GoldManager>(); // Find the GoldManager in the scene
     }
 
     void Update()
     {
         // Check if there are units to create
-        if (unitQueue.Count > 0)
+        if (unitQueue.Count > 0 && currentUnits.Count < maxUnits)
         {
             StartCoroutine(SpawnUnit(unitQueue.Dequeue()));
         }
@@ -28,8 +33,23 @@ public class UnitManager : MonoBehaviour
     // Method to add a unit to the queue
     public void QueueUnit(UnitCharacteristics unit)
     {
-        unitQueue.Enqueue(unit);
-        Debug.Log("Unit added to queue: " + unit.unitName);
+        int randomCost = unitCosts[Random.Range(0, unitCosts.Count)]; // Get a random cost from the list
+        if (goldManager.UseGold(randomCost))
+        {
+            if (currentUnits.Count < maxUnits)
+            {
+                unitQueue.Enqueue(unit);
+                Debug.Log("Unit added to queue: " + unit.unitName + " with cost: " + randomCost);
+            }
+            else
+            {
+                Debug.Log("Maximum number of units reached, cannot add unit: " + unit.unitName);
+            }
+        }
+        else
+        {
+            Debug.Log("Not enough gold to add unit: " + unit.unitName);
+        }
     }
 
     // Coroutine to spawn a unit after a certain time
@@ -41,6 +61,9 @@ public class UnitManager : MonoBehaviour
         // Spawn the unit at the spawn point
         GameObject newUnit = Instantiate(unit.unitPrefab, spawnPoint.position, Quaternion.identity);
         Debug.Log("Unit spawned: " + unit.unitName);
+
+        // Add the new unit to the list of current units
+        currentUnits.Add(newUnit);
 
         // Set the target position of the unit
         MovementController movementController = newUnit.GetComponent<MovementController>();
@@ -59,6 +82,7 @@ public class UnitManager : MonoBehaviour
         if (health != null)
         {
             health.healthBarPrefab = healthBarPrefab;
+            health.onDeath += () => currentUnits.Remove(newUnit); // Remove the unit from the list when it dies
         }
 
         // Ensure the new units use the updated stats

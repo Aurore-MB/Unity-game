@@ -21,6 +21,7 @@ public class UnitButton : MonoBehaviour
 
     private void OnButtonClick()
     {
+        Debug.Log($"Button clicked for unit: {unit.unitName}");
         if (isUpgradeButton)
         {
             // Sélectionner l'unité pour la mise à niveau
