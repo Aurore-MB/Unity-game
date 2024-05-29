@@ -6,6 +6,9 @@ public class EnemyMovementController : MonoBehaviour
     public Vector3 targetPosition;  // Position cible vers laquelle l'ennemi se déplacera
     public float speed = 1.0f;      // Vitesse de déplacement de l'ennemi
     public float stoppingDistance = 0.1f; // Distance minimale avant de s'arrêter
+    public int damageAmount = 10;   // Quantité de dégâts infligés à chaque attaque
+    public float attackInterval = 4.0f; // Intervalle entre chaque attaque
+
     private Animator animator;      // Référence à l'Animator
     private Health health;          // Référence au composant Health
     private Coroutine attackCoroutine; // Référence à la coroutine d'attaque
@@ -93,8 +96,8 @@ public class EnemyMovementController : MonoBehaviour
     {
         while (!targetHealth.IsDead() && !health.IsDead())
         {
-            targetHealth.TakeDamage(10);
-            yield return new WaitForSeconds(4.0f); // Attaque toutes les 2 secondes, ajustez si nécessaire
+            targetHealth.TakeDamage(damageAmount); // Utiliser la valeur de damageAmount
+            yield return new WaitForSeconds(attackInterval); // Utiliser la valeur de attackInterval
         }
     }
 

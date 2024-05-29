@@ -230,9 +230,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67af86eac68b8e4bb633d0d646004bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 35
-  healthBar: {fileID: 0}
-  healthBarObject: {fileID: 9074706451774553118, guid: 2715dca14fbe8304cbe78adc3c84dbf4, type: 3}
+  maxHealth: 25
+  healthBarPrefab: {fileID: 0}
   xpReward: 50
   goldReward: 50
 --- !u!114 &3480477408402428296
@@ -250,3 +249,5 @@ MonoBehaviour:
   targetPosition: {x: -40, y: 0, z: 0}
   speed: 1
   stoppingDistance: 0.1
+  damageAmount: 10
+  attackInterval: 4

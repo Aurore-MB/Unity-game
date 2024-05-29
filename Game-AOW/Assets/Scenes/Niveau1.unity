@@ -304,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   healthSlider: {fileID: 577855620}
-  damagePerSecond: 10
+  damagePerSecond: 1
   enemyTag: Player
 --- !u!1 &22867237
 GameObject:
@@ -2544,7 +2544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   healthSlider: {fileID: 670720482}
-  damagePerSecond: 10
+  damagePerSecond: 1
   enemyTag: Enemy
 --- !u!1 &708752014
 GameObject:

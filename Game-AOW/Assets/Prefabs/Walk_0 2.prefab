@@ -231,8 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 25
-  healthBar: {fileID: 0}
-  healthBarObject: {fileID: 9074706451774553118, guid: 2715dca14fbe8304cbe78adc3c84dbf4, type: 3}
+  healthBarPrefab: {fileID: 0}
   xpReward: 50
   goldReward: 50
 --- !u!114 &6226498668735878955
@@ -250,3 +249,5 @@ MonoBehaviour:
   targetPosition: {x: -40, y: 0, z: 0}
   speed: 1
   stoppingDistance: 0.1
+  damageAmount: 10
+  attackInterval: 4
