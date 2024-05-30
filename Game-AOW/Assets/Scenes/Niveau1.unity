@@ -1986,6 +1986,7 @@ GameObject:
   m_Component:
   - component: {fileID: 577855619}
   - component: {fileID: 577855620}
+  - component: {fileID: 577855621}
   m_Layer: 5
   m_Name: 'EnemySlider '
   m_TagString: Untagged
@@ -2065,6 +2066,22 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &577855621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577855618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3edb2f591b8ddc94e9e3d4833a839f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  healthSlider: {fileID: 577855620}
+  damagePerSecond: 10
+  enemyTag: Player
 --- !u!1 &590712593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2150,6 +2167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 670720481}
   - component: {fileID: 670720482}
+  - component: {fileID: 670720483}
   m_Layer: 5
   m_Name: PlayerSlider
   m_TagString: Untagged
@@ -2229,6 +2247,22 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &670720483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670720480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3edb2f591b8ddc94e9e3d4833a839f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  healthSlider: {fileID: 670720482}
+  damagePerSecond: 10
+  enemyTag: Enemy
 --- !u!1 &674646049
 GameObject:
   m_ObjectHideFlags: 0
@@ -3662,7 +3696,7 @@ MonoBehaviour:
     speed: 3
     unitCost: 0
     unitPrefab: {fileID: 9140150052840103856, guid: a3774f2dc994d0348a102c201b0f6891, type: 3}
-  isUpgradeButton: 0
+  isUpgradeButton: 1
 --- !u!114 &951952421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4796,7 +4830,7 @@ MonoBehaviour:
     speed: 2
     unitCost: 0
     unitPrefab: {fileID: 3201553023594629264, guid: 27af1875dc2098f4688de860a8ea8502, type: 3}
-  isUpgradeButton: 0
+  isUpgradeButton: 1
 --- !u!114 &1346380510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5785,7 +5819,7 @@ MonoBehaviour:
     speed: 2
     unitCost: 0
     unitPrefab: {fileID: 3201553023594629264, guid: 27af1875dc2098f4688de860a8ea8502, type: 3}
-  isUpgradeButton: 0
+  isUpgradeButton: 1
 --- !u!114 &1592680226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6061,7 +6095,7 @@ MonoBehaviour:
     speed: 2
     unitCost: 0
     unitPrefab: {fileID: 7702078839128705946, guid: de5758a5ab3d39642ae0aaca9755ffcb, type: 3}
-  isUpgradeButton: 0
+  isUpgradeButton: 1
 --- !u!114 &1656594393
 MonoBehaviour:
   m_ObjectHideFlags: 0

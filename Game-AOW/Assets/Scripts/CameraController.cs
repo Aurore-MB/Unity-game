@@ -19,6 +19,7 @@ public class CameraController : MonoBehaviour
 
         // Mettre à jour la position de la caméra en respectant les limites
         transform.position = new Vector3(newPositionX, transform.position.y, transform.position.z);
-    }
 
+        Debug.Log("Camera position updated to: " + transform.position);
+    }
 }

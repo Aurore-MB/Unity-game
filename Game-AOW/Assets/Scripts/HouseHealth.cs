@@ -20,13 +20,13 @@ public class HouseHealth : MonoBehaviour
     // Méthode pour appliquer des dégâts à la maison
     public void TakeDamage(float damage)
     {
-        Debug.Log("TakeDamage called with damage: " + damage);
+        Debug.Log(gameObject.name + " TakeDamage called with damage: " + damage);
         currentHealth -= damage;
         if (currentHealth < 0)
         {
             currentHealth = 0;
             // Ajouter ici ce qui se passe quand la maison est détruite
-            Debug.Log("House destroyed!");
+            Debug.Log(gameObject.name + " destroyed!");
         }
         UpdateHealthBar();
     }
@@ -37,11 +37,11 @@ public class HouseHealth : MonoBehaviour
         if (healthSlider != null)
         {
             healthSlider.value = currentHealth / maxHealth;
-            Debug.Log("Health updated: " + currentHealth + "/" + maxHealth);
+            Debug.Log(gameObject.name + " Health updated: " + currentHealth + "/" + maxHealth);
         }
         else
         {
-            Debug.LogError("Health Slider is not assigned!");
+            Debug.LogError(gameObject.name + " Health Slider is not assigned!");
         }
     }
 
@@ -51,9 +51,13 @@ public class HouseHealth : MonoBehaviour
         // Vérifier si l'objet entrant est une unité de l'équipe opposée
         if (other.gameObject.CompareTag(enemyTag))
         {
-            Debug.Log("Collision detected with " + other.gameObject.tag);
+            Debug.Log(gameObject.name + " Collision detected with " + other.gameObject.name);
             // Appliquer des dégâts en continu tant que l'unité reste en collision
             TakeDamage(damagePerSecond * Time.deltaTime); // Ajustez les dégâts par seconde
+        }
+        else
+        {
+            Debug.Log(gameObject.name + " Ignored collision with: " + other.gameObject.name);
         }
     }
 }
