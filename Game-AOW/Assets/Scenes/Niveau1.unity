@@ -380,8 +380,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279242769
-  m_fontColor: {r: 0.066037714, g: 0.06385723, b: 0.06385723, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -648,8 +648,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279703320
-  m_fontColor: {r: 0.09433961, g: 0.09211462, b: 0.09211462, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1180,7 +1180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6862745, g: 0.88821, b: 0.9607843, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1271,8 +1271,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1734,7 +1734,7 @@ MonoBehaviour:
     range: 12
     fireRate: 1.2
     unitCost: 0
-    turretPrefab: {fileID: 2828854183348017763, guid: c7cec2b521476244aa60056e70f3f56e, type: 3}
+    turretPrefab: {fileID: 5671356754179774555, guid: 52c096d30f61f2c4d88aafeccfe8369c, type: 3}
 --- !u!114 &482437533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2882,8 +2882,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279703320
-  m_fontColor: {r: 0.09433961, g: 0.091224626, b: 0.091224626, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3300,8 +3300,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280032285
-  m_fontColor: {r: 0.11320752, g: 0.10840154, b: 0.10840154, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3418,7 +3418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.2901961}
+  m_Color: {r: 0.21960784, g: 0.21960784, b: 0.21960784, a: 0.2901961}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3811,7 +3811,7 @@ Transform:
   m_GameObject: {fileID: 838117100}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -53.934677, y: -0.44040564, z: -1.9540174}
+  m_LocalPosition: {x: -29.91234, y: -0.7202028, z: -0.9770087}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4546,7 +4546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19335175, g: 0.745283, b: 0.734474, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4905,8 +4905,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479791
-  m_fontColor: {r: 0.43529412, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5413,7 +5413,7 @@ MonoBehaviour:
     range: 10
     fireRate: 1
     unitCost: 0
-    turretPrefab: {fileID: 4950677683374625732, guid: 9703c2144e06f334f9278800ac449c30, type: 3}
+    turretPrefab: {fileID: 7907899811227108656, guid: 287505513f927f443b8ae0986497566c, type: 3}
 --- !u!114 &1397128719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5720,8 +5720,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6928,8 +6928,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278979596
-  m_fontColor: {r: 0.047169805, g: 0.045612313, b: 0.045612313, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7240,8 +7240,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279834906
-  m_fontColor: {r: 0.103773594, g: 0.09936811, b: 0.09936811, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7508,8 +7508,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479791
-  m_fontColor: {r: 0.4339623, g: 0.19446424, b: 0.19446424, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7684,8 +7684,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279571734
-  m_fontColor: {r: 0.084905684, g: 0.0813012, b: 0.0813012, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7956,7 +7956,7 @@ MonoBehaviour:
     range: 15
     fireRate: 0.8
     unitCost: 0
-    turretPrefab: {fileID: 242481816057529287, guid: beafdbd1e9f42e045af3fc89a71f045a, type: 3}
+    turretPrefab: {fileID: 7913329906966156398, guid: 365ef0e9415c2a34bbd2f9df4f753094, type: 3}
 --- !u!114 &1947139675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8673,7 +8673,7 @@ Transform:
   m_GameObject: {fileID: 5289763508674824297}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.022339, y: 2.6997972, z: 9.022991}
+  m_LocalPosition: {x: -23.58, y: -1.76, z: 9.022991}
   m_LocalScale: {x: 20, y: 15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8870,7 +8870,7 @@ Transform:
   m_GameObject: {fileID: 2133771294092877469}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.032339, y: 2.6997972, z: 9.022991}
+  m_LocalPosition: {x: -4.96, y: -1.91, z: 9.022991}
   m_LocalScale: {x: 20, y: 15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
