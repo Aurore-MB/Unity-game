@@ -10,28 +10,39 @@ public class TurretManager : MonoBehaviour
     public TurretCharacteristics sacredTurret;
     public TurretCharacteristics naturalTurret;
     public TurretCharacteristics aquaticTurret;
-    public List<int> unitCosts = new List<int> { 50, 25, 75, 30, 20 };
+    public float spawnInterval = 0.5f;
+    public float spawnDuration = 5.0f;
+    public Vector2 spawnAreaSize = new Vector2(10, 10); // Size of the area where turrets can fall
 
     public void ConstructTurret(TurretCharacteristics turret)
     {
-        if (CanConstructTurret(turret))
+        StartCoroutine(SpawnTurretRepeatedly(turret));
+    }
+
+    private IEnumerator SpawnTurretRepeatedly(TurretCharacteristics turret)
+    {
+        float endTime = Time.time + spawnDuration;
+        while (Time.time < endTime)
         {
-            GameObject newTurret = Instantiate(turret.turretPrefab, turretPlacementArea.position, Quaternion.identity);
-            TurretInstance turretInstance = newTurret.GetComponent<TurretInstance>();
-            if (turretInstance != null)
-            {
-                turretInstance.UpdateStats(turret);
-            }
-        }
-        else
-        {
-            Debug.LogWarning("Cannot construct turret: " + turret.turretName);
+            SpawnTurret(turret);
+            yield return new WaitForSeconds(spawnInterval);
         }
     }
 
-    private bool CanConstructTurret(TurretCharacteristics turret)
+    private void SpawnTurret(TurretCharacteristics turret)
     {
-        return true; // Add construction conditions here if needed
+        Vector3 spawnPosition = new Vector3(
+            Random.Range(turretPlacementArea.position.x - spawnAreaSize.x / 2, turretPlacementArea.position.x + spawnAreaSize.x / 2),
+            turretPlacementArea.position.y + 10.0f,
+            turretPlacementArea.position.z
+        );
+
+        GameObject newTurret = Instantiate(turret.turretPrefab, spawnPosition, Quaternion.identity);
+        TurretInstance turretInstance = newTurret.GetComponent<TurretInstance>();
+        if (turretInstance != null)
+        {
+            turretInstance.UpdateStats(turret);
+        }
     }
 
     public void SellTurret(GameObject turretObject)

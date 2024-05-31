@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 156620523848912994}
   - component: {fileID: 3677949391391206666}
   - component: {fileID: 5903361586587957806}
+  - component: {fileID: 4914702792794590284}
+  - component: {fileID: -2377401104174865955}
   m_Layer: 0
   m_Name: flaming_3
   m_TagString: Untagged
@@ -216,3 +218,35 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4914702792794590284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7907899811227108656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a709e0a256145344d8193c141aae59f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretType:
+    turretName: flaming
+    damage: 50
+    range: 10
+    fireRate: 1
+    unitCost: 75
+    turretPrefab: {fileID: 7907899811227108656}
+--- !u!114 &-2377401104174865955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7907899811227108656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 220bd6dd39f7b9d4bb43b254d7af1044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallSpeed: 5

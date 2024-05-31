@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: -9220752741500859276}
   - component: {fileID: 5492507247852738400}
   - component: {fileID: -1048305482777555813}
+  - component: {fileID: 61673235166985779}
+  - component: {fileID: 607207252770725656}
   m_Layer: 0
   m_Name: natural_1
   m_TagString: Untagged
@@ -216,3 +218,35 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 1.11}
   m_EdgeRadius: 0
+--- !u!114 &61673235166985779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5627483686516981272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 220bd6dd39f7b9d4bb43b254d7af1044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallSpeed: 5
+--- !u!114 &607207252770725656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5627483686516981272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a709e0a256145344d8193c141aae59f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretType:
+    turretName: natural
+    damage: 35
+    range: 11
+    fireRate: 1.1
+    unitCost: 20
+    turretPrefab: {fileID: 5627483686516981272}
