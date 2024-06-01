@@ -2031,7 +2031,7 @@ MonoBehaviour:
     damage: 10
     speed: 0.5
     unitCost: 100
-    unitPrefab: {fileID: 9140150052840103856, guid: e965530d660e5ba418286464268b8bbb, type: 3}
+    unitPrefab: {fileID: 5725120366081039363, guid: e1ae5e3644ee3834483a3eae827222ae, type: 3}
   - unitName: shinobi2
     health: 25
     damage: 10
@@ -7095,7 +7095,7 @@ MonoBehaviour:
     damage: 3
     speed: 4
     unitCost: 0
-    unitPrefab: {fileID: 96475311259031731, guid: efeaa145ebf2363468047a90427a48ec, type: 3}
+    unitPrefab: {fileID: 5725120366081039363, guid: e1ae5e3644ee3834483a3eae827222ae, type: 3}
   isUpgradeButton: 0
 --- !u!114 &1757849986
 MonoBehaviour:
