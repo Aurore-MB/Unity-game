@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 3867094531057038395}
   - component: {fileID: -4922844843172429128}
   - component: {fileID: 4053377384121814140}
+  - component: {fileID: -4123805371766586852}
+  - component: {fileID: 751546105349893061}
   m_Layer: 0
   m_Name: dark_0
   m_TagString: Untagged
@@ -216,3 +218,35 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.15, y: 1.24}
   m_Direction: 0
+--- !u!114 &-4123805371766586852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5671356754179774555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 220bd6dd39f7b9d4bb43b254d7af1044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallSpeed: 5
+--- !u!114 &751546105349893061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5671356754179774555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a709e0a256145344d8193c141aae59f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretType:
+    turretName: dark
+    damage: 45
+    range: 12
+    fireRate: 1.2
+    unitCost: 50
+    turretPrefab: {fileID: 5671356754179774555}

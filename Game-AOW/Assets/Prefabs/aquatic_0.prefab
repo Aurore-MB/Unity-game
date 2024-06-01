@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1543051314110238173}
   - component: {fileID: -996951736114847890}
   - component: {fileID: -234088790257273993}
+  - component: {fileID: -5136102303957782745}
+  - component: {fileID: 6366788374102858413}
   m_Layer: 0
   m_Name: aquatic_0
   m_TagString: Untagged
@@ -216,3 +218,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-5136102303957782745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347490213866130697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a709e0a256145344d8193c141aae59f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretType:
+    turretName: aquatic
+    damage: 40
+    range: 14
+    fireRate: 1.3
+    unitCost: 25
+    turretPrefab: {fileID: 347490213866130697}
+--- !u!114 &6366788374102858413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347490213866130697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 220bd6dd39f7b9d4bb43b254d7af1044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallSpeed: 5
