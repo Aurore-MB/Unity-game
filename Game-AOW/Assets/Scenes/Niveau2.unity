@@ -2089,7 +2089,7 @@ MonoBehaviour:
     range: 14
     fireRate: 1.3
     unitCost: 0
-    turretPrefab: {fileID: 1031173129340838377, guid: a48f5ad6861130941b418675a572414a, type: 3}
+    turretPrefab: {fileID: 347490213866130697, guid: c2d8de6c244d0494291dfd7714e94ef9, type: 3}
   spawnInterval: 0.5
   spawnDuration: 5
   spawnAreaSize: {x: 10, y: 10}
@@ -3797,6 +3797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 838117101}
+  - component: {fileID: 838117102}
   m_Layer: 0
   m_Name: TurretPlacementArea
   m_TagString: Untagged
@@ -3813,12 +3814,63 @@ Transform:
   m_GameObject: {fileID: 838117100}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.91234, y: -0.7202028, z: -0.9770087}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1918020624}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &838117102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838117100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ead74030a16ff00439eb118d0ca26384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretPlacementArea: {fileID: 912568908}
+  flamingTurret:
+    turretName: flaming
+    damage: 50
+    range: 10
+    fireRate: 1
+    unitCost: 0
+    turretPrefab: {fileID: 7907899811227108656, guid: 287505513f927f443b8ae0986497566c, type: 3}
+  darkTurret:
+    turretName: dark
+    damage: 45
+    range: 12
+    fireRate: 1.2
+    unitCost: 0
+    turretPrefab: {fileID: 5671356754179774555, guid: 52c096d30f61f2c4d88aafeccfe8369c, type: 3}
+  sacredTurret:
+    turretName: sacred
+    damage: 30
+    range: 15
+    fireRate: 0.8
+    unitCost: 0
+    turretPrefab: {fileID: 7913329906966156398, guid: 365ef0e9415c2a34bbd2f9df4f753094, type: 3}
+  naturalTurret:
+    turretName: natural
+    damage: 35
+    range: 11
+    fireRate: 11
+    unitCost: 0
+    turretPrefab: {fileID: 5627483686516981272, guid: ff2128ab7319fc94e8065371ba808e48, type: 3}
+  aquaticTurret:
+    turretName: aquatic
+    damage: 40
+    range: 14
+    fireRate: 1.3
+    unitCost: 0
+    turretPrefab: {fileID: 347490213866130697, guid: c2d8de6c244d0494291dfd7714e94ef9, type: 3}
+  spawnInterval: 0.5
+  spawnDuration: 5
+  spawnAreaSize: {x: 10, y: 10}
 --- !u!1 &860152148
 GameObject:
   m_ObjectHideFlags: 0
@@ -3850,6 +3902,37 @@ Transform:
   m_Children:
   - {fileID: 552913316}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &912568907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 912568908}
+  m_Layer: 0
+  m_Name: TurretPlacement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &912568908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912568907}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.24, y: -1.29, z: -0.9770087}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1918020624}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &951952418
 GameObject:
@@ -4087,7 +4170,7 @@ MonoBehaviour:
     range: 14
     fireRate: 1.3
     unitCost: 0
-    turretPrefab: {fileID: 1031173129340838377, guid: a48f5ad6861130941b418675a572414a, type: 3}
+    turretPrefab: {fileID: 347490213866130697, guid: c2d8de6c244d0494291dfd7714e94ef9, type: 3}
 --- !u!114 &1091679809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7618,6 +7701,7 @@ Transform:
   - {fileID: 751060357}
   - {fileID: 183325822}
   - {fileID: 838117101}
+  - {fileID: 912568908}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1925714173
@@ -7958,7 +8042,7 @@ MonoBehaviour:
     range: 15
     fireRate: 0.8
     unitCost: 0
-    turretPrefab: {fileID: 7913329906966156398, guid: 88597f095f0b342448d23e0e57ee04f6, type: 3}
+    turretPrefab: {fileID: 0}
 --- !u!114 &1947139675
 MonoBehaviour:
   m_ObjectHideFlags: 0

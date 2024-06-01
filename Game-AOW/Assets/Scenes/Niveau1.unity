@@ -3571,7 +3571,7 @@ MonoBehaviour:
     range: 11
     fireRate: 1.1
     unitCost: 0
-    turretPrefab: {fileID: 5627483686516981272, guid: ff2128ab7319fc94e8065371ba808e48, type: 3}
+    turretPrefab: {fileID: 0}
 --- !u!114 &804798195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5498,7 +5498,7 @@ MonoBehaviour:
     range: 10
     fireRate: 1
     unitCost: 0
-    turretPrefab: {fileID: 7907899811227108656, guid: 287505513f927f443b8ae0986497566c, type: 3}
+    turretPrefab: {fileID: 0}
 --- !u!114 &1397128719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8042,7 +8042,7 @@ MonoBehaviour:
     range: 15
     fireRate: 0.8
     unitCost: 0
-    turretPrefab: {fileID: 7913329906966156398, guid: 365ef0e9415c2a34bbd2f9df4f753094, type: 3}
+    turretPrefab: {fileID: 0}
 --- !u!114 &1947139675
 MonoBehaviour:
   m_ObjectHideFlags: 0
