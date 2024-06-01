@@ -1939,7 +1939,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 3089767453170734794, guid: a3bf7049768fc034e85c6eb673fb0f17, type: 3}
   - {fileID: 4230172636275264915, guid: 9c69b45adf342d64aaa46d21adad1faf, type: 3}
-  - {fileID: 4386275880269868691, guid: d45e42be8bf3f2b40a91db7f64981223, type: 3}
+  - {fileID: 5265449978813413422, guid: 1e8caaae57781194f98f97a085bac5ef, type: 3}
   initialDelay: 3
   spawnInterval: 5
   enemySpawnPoint: {fileID: 1488689606}
@@ -2019,13 +2019,13 @@ MonoBehaviour:
     damage: 10
     speed: 0.5
     unitCost: 25
-    unitPrefab: {fileID: 7702078839128705946, guid: 1bc85fdd78ee65d4e887ac76c084d59d, type: 3}
+    unitPrefab: {fileID: 6329945237811665269, guid: dfc9acd920fb47342a9c3589a84695d7, type: 3}
   - unitName: fithter
     health: 25
     damage: 10
     speed: 0.5
     unitCost: 50
-    unitPrefab: {fileID: 96475311259031731, guid: efeaa145ebf2363468047a90427a48ec, type: 3}
+    unitPrefab: {fileID: 1457516845359644137, guid: 11ab118684491e14cb5dd4bc167b62cc, type: 3}
   - unitName: fithter2
     health: 25
     damage: 10
@@ -2090,7 +2090,9 @@ MonoBehaviour:
     fireRate: 1.3
     unitCost: 0
     turretPrefab: {fileID: 1031173129340838377, guid: a48f5ad6861130941b418675a572414a, type: 3}
-  unitCosts: 32000000190000004b0000001e00000014000000
+  spawnInterval: 0.5
+  spawnDuration: 5
+  spawnAreaSize: {x: 10, y: 10}
 --- !u!1 &577855618
 GameObject:
   m_ObjectHideFlags: 0
@@ -3047,7 +3049,7 @@ MonoBehaviour:
     damage: 5
     speed: 3
     unitCost: 0
-    unitPrefab: {fileID: 9140150052840103856, guid: e965530d660e5ba418286464268b8bbb, type: 3}
+    unitPrefab: {fileID: 1457516845359644137, guid: 11ab118684491e14cb5dd4bc167b62cc, type: 3}
   isUpgradeButton: 0
 --- !u!114 &738291158
 MonoBehaviour:
@@ -6065,7 +6067,7 @@ MonoBehaviour:
     damage: 5
     speed: 2
     unitCost: 0
-    unitPrefab: {fileID: 7702078839128705946, guid: 1bc85fdd78ee65d4e887ac76c084d59d, type: 3}
+    unitPrefab: {fileID: 6329945237811665269, guid: dfc9acd920fb47342a9c3589a84695d7, type: 3}
   isUpgradeButton: 0
 --- !u!114 &1576907198
 MonoBehaviour:
