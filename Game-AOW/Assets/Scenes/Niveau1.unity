@@ -2019,7 +2019,7 @@ MonoBehaviour:
     damage: 10
     speed: 0.5
     unitCost: 25
-    unitPrefab: {fileID: 7702078839128705946, guid: de5758a5ab3d39642ae0aaca9755ffcb, type: 3}
+    unitPrefab: {fileID: 6329945237811665269, guid: dfc9acd920fb47342a9c3589a84695d7, type: 3}
   - unitName: fithter
     health: 25
     damage: 10
@@ -6060,12 +6060,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit:
-    unitName: Shinobi
+    unitName: tengu
     health: 25
     damage: 5
     speed: 2
     unitCost: 0
-    unitPrefab: {fileID: 7702078839128705946, guid: de5758a5ab3d39642ae0aaca9755ffcb, type: 3}
+    unitPrefab: {fileID: 6329945237811665269, guid: dfc9acd920fb47342a9c3589a84695d7, type: 3}
   isUpgradeButton: 0
 --- !u!114 &1576907198
 MonoBehaviour:

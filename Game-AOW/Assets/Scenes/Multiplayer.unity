@@ -1918,6 +1918,7 @@ GameObject:
   - component: {fileID: 552913323}
   - component: {fileID: 552913325}
   - component: {fileID: 552913324}
+  - component: {fileID: 552913326}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2093,6 +2094,25 @@ MonoBehaviour:
   targetPoint: {fileID: 751060357}
   healthBarPrefab: {fileID: 2733153372203747130, guid: 7067e2dfd9387aa429e467c13fca2582, type: 3}
   unitCosts: 32000000190000001e0000004b000000
+--- !u!114 &552913326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552913314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eb0eec35eeead548b6d898af190c004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1Prefab: {fileID: 96475311259031731, guid: 2b7568f7fcc2fa949bd976e5e758b91c, type: 3}
+  player2Prefab: {fileID: 4122854892825821772, guid: ccdd7ec05b886c043ab014687c0d0f03, type: 3}
+  player1SpawnPoint: {fileID: 151626967}
+  player2SpawnPoint: {fileID: 1488689606}
+  healthBarPrefab: {fileID: 2733153372203747130, guid: 7067e2dfd9387aa429e467c13fca2582, type: 3}
+  player1TargetPoint: {fileID: 751060357}
+  player2TargetPoint: {fileID: 183325822}
 --- !u!1 &577855618
 GameObject:
   m_ObjectHideFlags: 0

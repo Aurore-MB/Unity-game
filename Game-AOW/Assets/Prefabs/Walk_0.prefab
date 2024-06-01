@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 547364984256735121}
   - component: {fileID: 5334157969510302361}
   - component: {fileID: 2786975357657798841}
-  - component: {fileID: 2409358707310486404}
+  - component: {fileID: -4660853561861398759}
   m_Layer: 0
   m_Name: Walk_0
   m_TagString: Player
@@ -231,10 +231,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 25
-  healthBarPrefab: {fileID: 0}
+  healthBarPrefab: {fileID: 2733153372203747130, guid: 4c349b10e37ca274f96e0fe2da391b5c, type: 3}
   xpReward: 100
   goldReward: 50
---- !u!114 &2409358707310486404
+--- !u!114 &-4660853561861398759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
