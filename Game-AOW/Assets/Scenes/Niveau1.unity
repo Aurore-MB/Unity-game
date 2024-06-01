@@ -2113,15 +2113,17 @@ MonoBehaviour:
     range: 11
     fireRate: 1.1
     unitCost: 0
-    turretPrefab: {fileID: 943306175865427589, guid: cbfdb9b9904aeab4f9a4665a9206c966, type: 3}
+    turretPrefab: {fileID: 5627483686516981272, guid: ff2128ab7319fc94e8065371ba808e48, type: 3}
   aquaticTurret:
     turretName: aquatic
     damage: 40
     range: 14
     fireRate: 1.3
     unitCost: 0
-    turretPrefab: {fileID: 1031173129340838377, guid: a48f5ad6861130941b418675a572414a, type: 3}
-  unitCosts: 32000000190000004b0000001e00000014000000
+    turretPrefab: {fileID: 347490213866130697, guid: c2d8de6c244d0494291dfd7714e94ef9, type: 3}
+  spawnInterval: 0.5
+  spawnDuration: 1
+  spawnAreaSize: {x: 10, y: 10}
 --- !u!1 &577855618
 GameObject:
   m_ObjectHideFlags: 0
@@ -3569,7 +3571,7 @@ MonoBehaviour:
     range: 11
     fireRate: 1.1
     unitCost: 0
-    turretPrefab: {fileID: 943306175865427589, guid: cbfdb9b9904aeab4f9a4665a9206c966, type: 3}
+    turretPrefab: {fileID: 5627483686516981272, guid: ff2128ab7319fc94e8065371ba808e48, type: 3}
 --- !u!114 &804798195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3897,7 +3899,9 @@ MonoBehaviour:
     fireRate: 1.3
     unitCost: 20
     turretPrefab: {fileID: 347490213866130697, guid: c2d8de6c244d0494291dfd7714e94ef9, type: 3}
-  unitCosts: 32000000190000004b0000001e00000014000000
+  spawnInterval: 0.5
+  spawnDuration: 5
+  spawnAreaSize: {x: 10, y: 10}
 --- !u!1 &860152148
 GameObject:
   m_ObjectHideFlags: 0
@@ -4166,7 +4170,7 @@ MonoBehaviour:
     range: 14
     fireRate: 1.3
     unitCost: 0
-    turretPrefab: {fileID: 1031173129340838377, guid: a48f5ad6861130941b418675a572414a, type: 3}
+    turretPrefab: {fileID: 347490213866130697, guid: c2d8de6c244d0494291dfd7714e94ef9, type: 3}
 --- !u!114 &1091679809
 MonoBehaviour:
   m_ObjectHideFlags: 0
