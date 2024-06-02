@@ -10,7 +10,7 @@ public class GameDataManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // Ne pas détruire ce GameObject lors du chargement d'une nouvelle scène
+            DontDestroyOnLoad(gameObject); 
         }
         else
         {
