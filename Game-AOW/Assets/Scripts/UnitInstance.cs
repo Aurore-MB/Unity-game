@@ -30,6 +30,6 @@ public class UnitInstance : MonoBehaviour
         {
             movementController.speed = unitType.speed;
         }
-        // Ajoutez ici toute autre mise à jour nécessaire pour les autres composants, comme les dégâts
+        
     }
 }
