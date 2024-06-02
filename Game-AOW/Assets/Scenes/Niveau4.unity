@@ -179,14 +179,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.59, y: 4.47}
+    oldSize: {x: 5.788889, y: 5.322222}
     newSize: {x: 5.59, y: 4.47}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6, y: 3.96}
+  m_Size: {x: 5.74, y: 3.6}
   m_EdgeRadius: 0
 --- !u!212 &14874605
 SpriteRenderer:
@@ -229,7 +229,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f9b5f1aba1f6eb4489d289946a2eb7eb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d87763340296134498f01e9785063a62, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -249,7 +249,7 @@ Transform:
   m_GameObject: {fileID: 14874602}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.82, y: -0.77, z: -0.9770087}
+  m_LocalPosition: {x: 2.2, y: -0.77, z: -0.9770087}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -288,7 +288,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 6, y: 4.47}
+  m_Size: {x: 4.63, y: 1.57}
   m_Direction: 0
 --- !u!114 &14874608
 MonoBehaviour:
@@ -2050,25 +2050,25 @@ MonoBehaviour:
     damage: 10
     speed: 0.5
     unitCost: 25
-    unitPrefab: {fileID: 6329945237811665269, guid: 134f7a79c61db2b40b2535a489ed44fc, type: 3}
+    unitPrefab: {fileID: 8810466034472983076, guid: 3c0aac13283ecb54c9ccce7a9f772948, type: 3}
   - unitName: fithter
     health: 25
     damage: 10
     speed: 0.5
     unitCost: 50
-    unitPrefab: {fileID: 96475311259031731, guid: 6c2d9a9f11b8bd845afaad79884b081a, type: 3}
+    unitPrefab: {fileID: 3204176817421626239, guid: 11c5060fff583dd4eb21120a1e58365a, type: 3}
   - unitName: fithter2
     health: 25
     damage: 10
     speed: 0.5
     unitCost: 100
-    unitPrefab: {fileID: 9140150052840103856, guid: 6f5ae2a03d81c0e438cd475c45bacc84, type: 3}
+    unitPrefab: {fileID: 7163567310382320066, guid: 295619a5165473b4a8f73b92d865de6f, type: 3}
   - unitName: shinobi2
     health: 25
     damage: 10
     speed: 0.5
     unitCost: 30
-    unitPrefab: {fileID: 3201553023594629264, guid: 5524d6568c07b9d4a8fca06a532b84ee, type: 3}
+    unitPrefab: {fileID: 6329945237811665269, guid: dfc9acd920fb47342a9c3589a84695d7, type: 3}
   spawnPoint: {fileID: 151626967}
   targetPoint: {fileID: 751060357}
   healthBarPrefab: {fileID: 2733153372203747130, guid: 3c83b0ef92866f04d89d8919c9742168, type: 3}
@@ -2606,7 +2606,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f9b5f1aba1f6eb4489d289946a2eb7eb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d87763340296134498f01e9785063a62, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -2626,7 +2626,7 @@ Transform:
   m_GameObject: {fileID: 685037932}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.912338, y: -0.77, z: -0.9770087}
+  m_LocalPosition: {x: -30.22, y: -0.88, z: -0.9770087}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2668,14 +2668,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.59, y: 4.47}
+    oldSize: {x: 5.788889, y: 5.322222}
     newSize: {x: 5.59, y: 4.47}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6, y: 3.96}
+  m_Size: {x: 6, y: 3.43}
   m_EdgeRadius: 0
 --- !u!70 &685037937
 CapsuleCollider2D:
@@ -2710,7 +2710,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 6, y: 4.47}
+  m_Size: {x: 4.66, y: 4.25}
   m_Direction: 0
 --- !u!114 &685037938
 MonoBehaviour:
@@ -3080,7 +3080,7 @@ MonoBehaviour:
     damage: 5
     speed: 3
     unitCost: 0
-    unitPrefab: {fileID: 9140150052840103856, guid: 6f5ae2a03d81c0e438cd475c45bacc84, type: 3}
+    unitPrefab: {fileID: 3204176817421626239, guid: 11c5060fff583dd4eb21120a1e58365a, type: 3}
   isUpgradeButton: 0
 --- !u!114 &738291158
 MonoBehaviour:
@@ -4615,7 +4615,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4, y: -9}
+  m_AnchoredPosition: {x: -589, y: 13}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1271780254
@@ -6150,7 +6150,7 @@ MonoBehaviour:
     damage: 5
     speed: 2
     unitCost: 0
-    unitPrefab: {fileID: 6329945237811665269, guid: 134f7a79c61db2b40b2535a489ed44fc, type: 3}
+    unitPrefab: {fileID: 8810466034472983076, guid: 3c0aac13283ecb54c9ccce7a9f772948, type: 3}
   isUpgradeButton: 0
 --- !u!114 &1576907198
 MonoBehaviour:
@@ -7178,7 +7178,7 @@ MonoBehaviour:
     damage: 3
     speed: 4
     unitCost: 0
-    unitPrefab: {fileID: 96475311259031731, guid: 6c2d9a9f11b8bd845afaad79884b081a, type: 3}
+    unitPrefab: {fileID: 7163567310382320066, guid: 295619a5165473b4a8f73b92d865de6f, type: 3}
   isUpgradeButton: 0
 --- !u!114 &1757849986
 MonoBehaviour:
@@ -8217,7 +8217,7 @@ MonoBehaviour:
     damage: 10
     speed: 10
     unitCost: 0
-    unitPrefab: {fileID: 3201553023594629264, guid: 5524d6568c07b9d4a8fca06a532b84ee, type: 3}
+    unitPrefab: {fileID: 6329945237811665269, guid: dfc9acd920fb47342a9c3589a84695d7, type: 3}
   isUpgradeButton: 0
 --- !u!114 &2049776902
 MonoBehaviour:
@@ -8956,7 +8956,7 @@ Transform:
   m_GameObject: {fileID: 2133771294092877469}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.96, y: -1.91, z: 9.022991}
+  m_LocalPosition: {x: -3.71, y: -1.05, z: 9.022991}
   m_LocalScale: {x: 20, y: 15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
