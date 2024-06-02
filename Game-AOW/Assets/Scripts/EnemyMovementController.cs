@@ -10,7 +10,7 @@ public class EnemyMovementController : MonoBehaviour
     public float attackInterval = 4.0f; // Intervalle entre chaque attaque
 
     private Animator animator;      // Référence à l'Animator
-    private Health health;          // Référence au composant Health
+    private Health health;          
     private Coroutine attackCoroutine; // Référence à la coroutine d'attaque
     private Rigidbody2D rb;
 
@@ -24,7 +24,7 @@ public class EnemyMovementController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.gravityScale = 1; // Assurez-vous que la gravité est activée
+            rb.gravityScale = 1; 
             rb.constraints = RigidbodyConstraints2D.FreezeRotation; // Empêche le personnage de tourner
         }
 
@@ -46,7 +46,7 @@ public class EnemyMovementController : MonoBehaviour
             // Déplace l'ennemi vers la position cible à chaque frame
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
             Debug.Log("Enemy current position: " + transform.position);
-            yield return null; // Attend la prochaine frame
+            yield return null; 
         }
         
         // Assure que l'ennemi atteint précisément la position cible
@@ -96,8 +96,8 @@ public class EnemyMovementController : MonoBehaviour
     {
         while (!targetHealth.IsDead() && !health.IsDead())
         {
-            targetHealth.TakeDamage(damageAmount); // Utiliser la valeur de damageAmount
-            yield return new WaitForSeconds(attackInterval); // Utiliser la valeur de attackInterval
+            targetHealth.TakeDamage(damageAmount); 
+            yield return new WaitForSeconds(attackInterval); 
         }
     }
 
