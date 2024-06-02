@@ -13,8 +13,37 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Debug.Log("GameManager started");
+        GameDataManager.instance.LoadGameData(); // Charger les données du jeu au début du niveau
+        UpdateUI(); // Mettre à jour l'interface utilisateur avec les données chargées
+        InitializeHealth(); // Initialiser la santé de base des joueurs et des ennemis
+
         StartCoroutine(WaitAndMovePlayers());
         StartCoroutine(SpawnEnemies());
+    }
+
+    void UpdateUI()
+    {
+        // Mettez à jour l'interface utilisateur avec les données chargées
+        // Par exemple :
+        // goldText.text = GameDataManager.instance.gameData.gold.ToString();
+        // xpText.text = GameDataManager.instance.gameData.xp.ToString();
+    }
+
+    void InitializeHealth()
+    {
+        // Assurez-vous que les objets de santé de base sont correctement référencés
+        HouseHealth playerBaseHealth = FindObjectOfType<HouseHealth>(true); // Changer en fonction de votre implémentation
+        HouseHealth enemyBaseHealth = FindObjectOfType<HouseHealth>(false); // Changer en fonction de votre implémentation
+
+        if (playerBaseHealth != null)
+        {
+            playerBaseHealth.SetHealth(GameDataManager.instance.gameData.playerBaseHealth);
+        }
+
+        if (enemyBaseHealth != null)
+        {
+            enemyBaseHealth.SetHealth(GameDataManager.instance.gameData.enemyBaseHealth);
+        }
     }
 
     IEnumerator WaitAndMovePlayers()

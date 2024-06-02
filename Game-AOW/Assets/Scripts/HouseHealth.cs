@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,12 +11,16 @@ public class HouseHealth : MonoBehaviour
 
     void Start()
     {
-        // Initialiser les points de vie actuels au maximum au démarrage
         currentHealth = maxHealth;
         UpdateHealthBar();
     }
 
-    // Méthode pour appliquer des dégâts à la maison
+    public void SetHealth(int health)
+    {
+        currentHealth = health;
+        UpdateHealthBar();
+    }
+
     public void TakeDamage(float damage)
     {
         Debug.Log(gameObject.name + " TakeDamage called with damage: " + damage);
@@ -25,13 +28,11 @@ public class HouseHealth : MonoBehaviour
         if (currentHealth < 0)
         {
             currentHealth = 0;
-            // Ajouter ici ce qui se passe quand la maison est détruite
             Debug.Log(gameObject.name + " destroyed!");
         }
         UpdateHealthBar();
     }
 
-    // Méthode pour mettre à jour l'affichage de la barre de vie
     void UpdateHealthBar()
     {
         if (healthSlider != null)
@@ -45,15 +46,12 @@ public class HouseHealth : MonoBehaviour
         }
     }
 
-    // Gestion des collisions continues
     void OnTriggerStay2D(Collider2D other)
     {
-        // Vérifier si l'objet entrant est une unité de l'équipe opposée
         if (other.gameObject.CompareTag(enemyTag))
         {
             Debug.Log(gameObject.name + " Collision detected with " + other.gameObject.name);
-            // Appliquer des dégâts en continu tant que l'unité reste en collision
-            TakeDamage(damagePerSecond * Time.deltaTime); // Ajustez les dégâts par seconde
+            TakeDamage(damagePerSecond * Time.deltaTime);
         }
         else
         {
