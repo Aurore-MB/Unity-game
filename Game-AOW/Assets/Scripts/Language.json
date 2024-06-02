@@ -1,0 +1,23 @@
+{
+    "play": {
+        "English": "Play",
+        "French": "Jouer",
+        "Spanish": "Jugar",
+        "German": "Spielen",
+        "Italian": "Giocare"
+    },
+    "language": {
+        "English": "Language",
+        "French": "Langue",
+        "Spanish": "Idioma",
+        "German": "Sprache",
+        "Italian": "Lingua"
+    },
+    "rules": {
+        "English": "Rules",
+        "French": "Règles",
+        "Spanish": "Reglas",
+        "German": "Regeln",
+        "Italian": "Regole"
+    }
+}

@@ -5,16 +5,12 @@ public class LanguageSelector : MonoBehaviour
 {
     public Dropdown languageDropdown;
 
-    void Start()
-    {
-        languageDropdown.onValueChanged.AddListener(delegate {
-            LanguageDropdownValueChanged(languageDropdown);
-        });
-    }
+    private string[] languages = { "English", "French", "Spanish", "German", "Italian" };
 
-    void LanguageDropdownValueChanged(Dropdown change)
+    public void OnLanguageChanged(int index)
     {
-        string selectedLanguage = change.options[change.value].text.ToLower();
-        LocalizationManager.instance.LoadLocalizedText(selectedLanguage);
+        string selectedLanguage = languages[index];
+        // Appliquer la logique pour changer la langue du jeu en fonction de 'selectedLanguage'
+        Debug.Log("Language changed to: " + selectedLanguage);
     }
 }
