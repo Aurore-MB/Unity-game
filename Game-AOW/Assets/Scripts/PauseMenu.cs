@@ -1,13 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class OptionMenu : MonoBehaviour
+public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] GameObject optionMenu;
+    [SerializeField] private GameObject pauseMenu; // Ajout de 'private' pour une meilleure pratique de codage
 
     public void Pause()
     {
-        optionMenu.SetActive(true);
+        pauseMenu.SetActive(true);
     }
 
     public void Home()
@@ -17,7 +17,7 @@ public class OptionMenu : MonoBehaviour
 
     public void Resume()
     {
-        optionMenu.SetActive(false);
+        pauseMenu.SetActive(false);
     }
 
     public void Restart()
