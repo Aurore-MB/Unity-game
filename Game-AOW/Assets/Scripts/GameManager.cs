@@ -23,15 +23,12 @@ public class GameManager : MonoBehaviour
 
     void UpdateUI()
     {
-        // Mettez à jour l'interface utilisateur avec les données chargées
-        // Par exemple :
-        // goldText.text = GameDataManager.instance.gameData.gold.ToString();
-        // xpText.text = GameDataManager.instance.gameData.xp.ToString();
+        
     }
 
     void InitializeHealth()
     {
-        // Assurez-vous que les objets de santé de base sont correctement référencés
+        
         HouseHealth playerBaseHealth = FindObjectOfType<HouseHealth>(true); // Changer en fonction de votre implémentation
         HouseHealth enemyBaseHealth = FindObjectOfType<HouseHealth>(false); // Changer en fonction de votre implémentation
 
