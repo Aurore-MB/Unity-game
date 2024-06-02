@@ -17,10 +17,9 @@ public class UpgradeManager : MonoBehaviour
 
     void Start()
     {
-        // Désactiver les boutons d'amélioration et le texte des statistiques au début
+        
         SetUpgradeOptionsActive(false);
 
-        // Ajouter des listeners aux boutons
         healthUpgradeButton.onClick.AddListener(UpgradeHealth);
         damageUpgradeButton.onClick.AddListener(UpgradeDamage);
         speedUpgradeButton.onClick.AddListener(UpgradeSpeed);
@@ -61,7 +60,7 @@ public class UpgradeManager : MonoBehaviour
     {
         if (selectedUnit != null)
         {
-            selectedUnit.health += 10; // Augmente la santé de l'unité de 10 (ajustez la valeur selon vos besoins)
+            selectedUnit.health += 10; 
             UpdateUnitInfo();
             UpdateExistingUnits();
         }
@@ -71,7 +70,7 @@ public class UpgradeManager : MonoBehaviour
     {
         if (selectedUnit != null)
         {
-            selectedUnit.damage += 5; // Augmente les dégâts de l'unité de 5 (ajustez la valeur selon vos besoins)
+            selectedUnit.damage += 5; 
             UpdateUnitInfo();
             UpdateExistingUnits();
         }
@@ -81,7 +80,7 @@ public class UpgradeManager : MonoBehaviour
     {
         if (selectedUnit != null)
         {
-            selectedUnit.speed += 1; // Augmente la vitesse de l'unité de 1 (ajustez la valeur selon vos besoins)
+            selectedUnit.speed += 1; 
             UpdateUnitInfo();
             UpdateExistingUnits();
         }
@@ -89,14 +88,12 @@ public class UpgradeManager : MonoBehaviour
 
     public void UnlockUnit()
     {
-        // Logique pour déverrouiller l'unité, par exemple rendre l'unité disponible dans le jeu
         Debug.Log("Unit unlocked: " + selectedUnit.unitName);
-        unlockButton.interactable = false; // Désactive le bouton de déverrouillage après utilisation
-    }
+        unlockButton.interactable = false; 
 
     void UpdateExistingUnits()
     {
-        // Parcourir toutes les instances de l'unité présente et mettre à jour leurs statistiques
+
         UnitInstance[] existingUnits = FindObjectsOfType<UnitInstance>();
         foreach (var unit in existingUnits)
         {
