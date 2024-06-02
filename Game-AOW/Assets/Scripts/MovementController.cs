@@ -24,7 +24,7 @@ public class MovementController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.gravityScale = 1; // Assurez-vous que la gravité est activée
+            rb.gravityScale = 1;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation; // Empêche le personnage de tourner
         }
 
@@ -96,7 +96,7 @@ public class MovementController : MonoBehaviour
     {
         while (!targetHealth.IsDead() && !health.IsDead())
         {
-            targetHealth.TakeDamage(damageAmount); // Utiliser la valeur de damageAmount
+            targetHealth.TakeDamage(damageAmount); 
             yield return new WaitForSeconds(attackInterval); // Utiliser la valeur de attackInterval
         }
     }
