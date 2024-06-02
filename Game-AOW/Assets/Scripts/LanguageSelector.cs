@@ -10,7 +10,6 @@ public class LanguageSelector : MonoBehaviour
     public void OnLanguageChanged(int index)
     {
         string selectedLanguage = languages[index];
-        // Appliquer la logique pour changer la langue du jeu en fonction de 'selectedLanguage'
         Debug.Log("Language changed to: " + selectedLanguage);
     }
 }
