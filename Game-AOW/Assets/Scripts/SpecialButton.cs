@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class SpecialButton : MonoBehaviour
 {
-    public string sceneName; // Le nom de la scène à charger
+    public string sceneName; 
 
     void Start()
     {
