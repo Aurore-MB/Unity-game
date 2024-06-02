@@ -12,7 +12,7 @@ public class TurretManager : MonoBehaviour
     public TurretCharacteristics aquaticTurret;
     public float spawnInterval = 0.5f;
     public float spawnDuration = 5.0f;
-    public Vector2 spawnAreaSize = new Vector2(10, 10); // Size of the area where turrets can fall
+    public Vector2 spawnAreaSize = new Vector2(10, 10); 
 
     public void ConstructTurret(TurretCharacteristics turret)
     {
