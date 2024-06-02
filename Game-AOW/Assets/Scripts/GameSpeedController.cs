@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;  // N'oubliez pas d'inclure TextMeshPro si vous l'utilisez
+using TMPro;  
 
 public class GameSpeedController : MonoBehaviour
 {
