@@ -13,8 +13,18 @@ public class Health : MonoBehaviour
     private XPManager xpManager; // Reference to the XPManager
     private GoldManager goldManager; // Reference to the GoldManager
     private bool isDead = false;
+    private AudioManager audioManager; // Reference to the AudioManager
 
     public event Action onDeath; // Event triggered when the unit dies
+
+    void Awake()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+        if (audioManager == null)
+        {
+            Debug.LogError("AudioManager not found in the scene!");
+        }
+    }
 
     void Start()
     {
@@ -98,6 +108,23 @@ public class Health : MonoBehaviour
         if (healthBar != null)
         {
             healthBar.SetActive(false);
+        }
+
+        // Play the death sound
+        if (audioManager != null)
+        {
+            if (gameObject.CompareTag("Player"))
+            {
+                audioManager.PlaySFX(audioManager.deadMan);
+            }
+            else
+            {
+                audioManager.PlaySFX(audioManager.deadVilian);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("AudioManager not found, cannot play death sound.");
         }
     }
 
