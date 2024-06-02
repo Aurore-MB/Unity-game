@@ -12,4 +12,10 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadSceneAsync(1);
         
     }
+    public void PlayRules()
+
+    {
+        SceneManager.LoadSceneAsync(6);
+        
+    }
 }
