@@ -13,9 +13,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Debug.Log("GameManager started");
-        GameDataManager.instance.LoadGameData(); // Charger les données du jeu au début du niveau
-        UpdateUI(); // Mettre à jour l'interface utilisateur avec les données chargées
-        InitializeHealth(); // Initialiser la santé de base des joueurs et des ennemis
+        GameDataManager.instance.LoadGameData(); 
+        UpdateUI(); 
+        InitializeHealth(); 
 
         StartCoroutine(WaitAndMovePlayers());
         StartCoroutine(SpawnEnemies());
@@ -29,8 +29,8 @@ public class GameManager : MonoBehaviour
     void InitializeHealth()
     {
         
-        HouseHealth playerBaseHealth = FindObjectOfType<HouseHealth>(true); // Changer en fonction de votre implémentation
-        HouseHealth enemyBaseHealth = FindObjectOfType<HouseHealth>(false); // Changer en fonction de votre implémentation
+        HouseHealth playerBaseHealth = FindObjectOfType<HouseHealth>(true);
+        HouseHealth enemyBaseHealth = FindObjectOfType<HouseHealth>(false); 
 
         if (playerBaseHealth != null)
         {
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator SpawnEnemies()
     {
-        // Wait before spawning the first enemy
+      
         yield return new WaitForSeconds(initialDelay);
 
         while (true)
