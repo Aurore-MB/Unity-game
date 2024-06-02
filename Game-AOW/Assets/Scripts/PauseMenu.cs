@@ -3,11 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject pauseMenu; // Verifica que este campo esté correctamente asignado en el Inspector
+    [SerializeField] private GameObject pauseMenu; 
 
     private void Start()
     {
-        pauseMenu.SetActive(false); // Asegura que el menú esté inactivo al inicio
+        pauseMenu.SetActive(false); 
     }
 
     public void Pause()
@@ -30,7 +30,7 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void ToggleOptionsMenu() // Nueva función para abrir/cerrar el menú de opciones
+    public void ToggleOptionsMenu() 
     {
         pauseMenu.SetActive(!pauseMenu.activeSelf);
     }
