@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject[] enemyPrefabs; // Array of enemy prefabs
-    public float initialDelay = 3.0f; // Delay before the first enemy appears
-    public float spawnInterval = 10.0f; // Interval between enemy spawns
-    public Transform enemySpawnPoint; // Spawn point for enemies
-    public Transform enemyTargetPoint; // Target point for enemies
-    public GameObject healthBarPrefab; // Reference to the health bar prefab
+    public GameObject[] enemyPrefabs; 
+    public float initialDelay = 3.0f; 
+    public float spawnInterval = 10.0f; 
+    public Transform enemySpawnPoint; 
+    public Transform enemyTargetPoint; 
+    public GameObject healthBarPrefab; 
 
     void Start()
     {
